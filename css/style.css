@@ -36,7 +36,34 @@ body > * {
     margin-left: 0;
     margin-right: 0;
 }
-.mainWidget{
+
+/* Responsive untuk Tablet dan HP */
+@media (max-width: 768px) {
+    .mainWidget {
+        height: 350px; /* Perkecil wheel */
+        width: 350px;
+        border: 20px solid transparent; /* Tipiskan border */
+    }
+
+    .wheel span {
+        top: 80px; /* Sesuaikan posisi teks */
+        left: 95px;
+        transform: rotate(calc(45deg * var(--i))) translate(0, -80px);
+    }
+
+    .wheel span b {
+        font-size: 18px; /* Kecilkan font teks di dalam roda */
+        transform: translate(-50%, -140px);
+    }
+
+    .spin {
+        height: 60px;
+        width: 60px;
+        font-size: 16px;
+    }
+}
+
+/* .mainWidget{
     position: relative;
     height: 548px;
     width: 548px;
@@ -118,7 +145,7 @@ body > * {
     width: 75px;
     height: 75px;
     font-size: 20px;
-}
+} */
 .highlighter {
     position: absolute;
     display: flex;
